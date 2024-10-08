@@ -1,7 +1,7 @@
-// Obtener el elemento del reloj y el del video
+// Obtener el elemento del reloj y el botón
 const clockElement = document.getElementById('clock');
-const pistaVideoElement = document.getElementById('pistaVideo');
 const esperaElement = document.getElementById('espera'); // Nuevo elemento de espera
+const unlockButton = document.getElementById('unlockButton'); // Botón para desbloquear
 
 // Función para actualizar el reloj
 function actualizarReloj() {
@@ -19,17 +19,41 @@ function actualizarReloj() {
     clockElement.innerHTML = `${horas}:${minutos}:${segundos}`;
 
     // Comprobar si es la hora exacta (2:57 PM)
-    if (horas == '15' && minutos == '22' && segundos == '00') {
-        mostrarPista();
+    if (horas == '14' && minutos == '57' && segundos == '00') {
+        mostrarBotonDesbloquear();
     }
+}
+
+// Función para mostrar el botón de desbloqueo
+function mostrarBotonDesbloquear() {
+    esperaElement.style.display = 'none';  // Ocultar el mensaje de espera
+    unlockButton.style.display = 'block';  // Mostrar el botón de desbloquear
 }
 
 // Función para mostrar y reproducir el video
 function mostrarPista() {
-    esperaElement.style.display = 'none';  // Ocultar el mensaje de espera
+    // Crear el elemento de video dinámicamente
+    const pistaVideoElement = document.createElement('video');
+    pistaVideoElement.width = 640;
+    pistaVideoElement.height = 360;
+    pistaVideoElement.controls = true; // Habilitar controles del video
+
+    // Crear el elemento source
+    const sourceElement = document.createElement('source');
+    sourceElement.src = 'tu-video.mp4'; // Ruta del video
+    sourceElement.type = 'video/mp4';
+
+    // Agregar el source al video
+    pistaVideoElement.appendChild(sourceElement);
+    document.body.appendChild(pistaVideoElement); // Agregar el video al body
+
+    // Mostrar el video y reproducirlo automáticamente
     pistaVideoElement.style.display = 'block';  // Mostrar el video
     pistaVideoElement.play();  // Reproducir el video automáticamente
 }
+
+// Evento del botón de desbloqueo
+unlockButton.addEventListener('click', mostrarPista);
 
 // Actualizar el reloj cada segundo
 setInterval(actualizarReloj, 1000);
