@@ -19,7 +19,7 @@ function actualizarReloj() {
     clockElement.innerHTML = `${horas}:${minutos}:${segundos}`;
 
     // Comprobar si es la hora exacta (2:57 PM)
-    if (horas == '14' && minutos == '57' && segundos == '00') {
+    if (horas == '15' && minutos == '35' && segundos == '00') {
         mostrarBotonDesbloquear();
     }
 }
