@@ -12,14 +12,25 @@
             color: #fff;
         }
         #pistaVideo {
-            display: none;
+            display: none; /* Mantener el video oculto */
             margin-top: 20px;
+        }
+        #espera {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Para centrar verticalmente */
         }
     </style>
 </head>
 <body>
-    <h1>Espera hasta las 2:57 PM</h1>
+    <h1>Espera hasta las 03:22 PM</h1>
     <div id="clock"></div>
+
+    <!-- Mensaje de espera -->
+    <div id="espera">
+        <p>Esperando la hora correcta...</p>
+    </div>
 
     <!-- Video oculto -->
     <video id="pistaVideo" width="640" height="360" controls>
