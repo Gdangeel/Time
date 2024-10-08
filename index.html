@@ -11,18 +11,21 @@
             background-color: #111;
             color: #fff;
         }
-        #pista {
+        #pistaVideo {
             display: none;
             margin-top: 20px;
-            font-size: 1.5em;
-            color: yellow;
         }
     </style>
 </head>
 <body>
-    <h1>Espera hasta las 3:00 AM</h1>
+    <h1>Espera hasta las 2:57 PM</h1>
     <div id="clock"></div>
-    <div id="pista">¡Has desbloqueado la pista! Aquí está tu código: 7345</div>
+
+    <!-- Video oculto -->
+    <video id="pistaVideo" width="640" height="360" controls>
+        <source src="01000001 01000101 01000110 01010000 01000001 01010100.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
 
     <script src="acertijo.js"></script>
 </body>
