@@ -18,7 +18,7 @@ function actualizarReloj() {
     clockElement.innerHTML = `${horas}:${minutos}:${segundos}`;
 
     // Comprobar si es la hora exacta para revelar la pista
-    if (horas == '03' && minutos == '00' && segundos == '00') {
+    if (horas == '14' && minutos == '53' && segundos == '00') {
         mostrarPista();
     }
 }
