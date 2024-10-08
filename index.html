@@ -11,20 +11,20 @@
             background-color: #111;
             color: #fff;
         }
-        #pistaVideo {
-            display: none; /* Mantener el video oculto */
-            margin-top: 20px;
-        }
         #espera {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh; /* Para centrar verticalmente */
         }
+        #pistaVideo {
+            display: none; /* Mantener el video oculto inicialmente */
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Espera hasta las 03:22 PM</h1>
+    <h1>Espera hasta las 03:32 PM</h1>
     <div id="clock"></div>
 
     <!-- Mensaje de espera -->
@@ -32,11 +32,8 @@
         <p>Esperando la hora correcta...</p>
     </div>
 
-    <!-- Video oculto -->
-    <video id="pistaVideo" width="640" height="360" controls>
-        <source src="01000001 01000101 01000110 01010000 01000001 01010100.mp4" type="video/mp4">
-        Tu navegador no soporta el elemento de video.
-    </video>
+    <!-- Botón para desbloquear el video -->
+    <button id="unlockButton" style="display: none;">Desbloquear Pista</button>
 
     <script src="acertijo.js"></script>
 </body>
