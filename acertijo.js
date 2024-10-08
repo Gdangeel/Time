@@ -1,6 +1,6 @@
-// Obtener el elemento del reloj y el de la pista
+// Obtener el elemento del reloj y el del video
 const clockElement = document.getElementById('clock');
-const pistaElement = document.getElementById('pista');
+const pistaVideoElement = document.getElementById('pistaVideo');
 
 // Función para actualizar el reloj
 function actualizarReloj() {
@@ -18,14 +18,15 @@ function actualizarReloj() {
     clockElement.innerHTML = `${horas}:${minutos}:${segundos}`;
 
     // Comprobar si es la hora exacta (2:57 PM)
-    if (horas == '15' && minutos == '00' && segundos == '00') {
+    if (horas == '15' && minutos == '14' && segundos == '00') {
         mostrarPista();
     }
 }
 
-// Función para mostrar la pista
+// Función para mostrar y reproducir el video
 function mostrarPista() {
-    pistaElement.style.display = 'block';
+    pistaVideoElement.style.display = 'block';  // Mostrar el video
+    pistaVideoElement.play();  // Reproducir el video automáticamente
 }
 
 // Actualizar el reloj cada segundo
